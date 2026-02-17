@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Montserrat:wght@700&family=Playfair+Display+SC:wght@900&family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Unbounded', cursive;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to right, #1D2A6D, #FBB034);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.3vw;
+}
+
+header {
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+h1 a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #F1F1F1;
+}
+
+h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    height: 13.5vh;
+    width: 22.9vw;
+    letter-spacing: 9px;
+    font-size: 22px;
+    padding: 20px;
+    transition: all 0.5s ease-in-out;
+    border-radius: 20px;
+    margin-left: 2vw;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+#icon {
+    font-size: 2.4em;
+    margin-right: 5vw;
+    color: #F1F1F1;
+    cursor: pointer;
+}
+
+.big {
+    font-size: 30px;
+    transition: all 0.5s ease-in-out;
+}
+
+h1:hover {
+    width: 24vw;
+    height: 14.6vh;
+    font-size: 27px;
+    text-shadow: -2px 3px 6px rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.mainbody {
+    width: 90vw;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.heading {
+    background-color: rgba(25, 25, 25, 0.8);
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    letter-spacing: 7px;
+    gap: 10px;
+    border-radius: 17px 17px 0 0;
+    color: #F1F1F1;
+    transition: all 0.67s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.heading:hover {
+    background-color: rgba(100, 149, 237, 0.7);
+    width: 100.6%;
+    height: 81.9vh;
+}
+
+.note {
+    margin-top: 1.6vw;
+    font-size: 55px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.heading span {
+    font-size: 18px;
+    letter-spacing: 3px;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 700;
+}
+
+#profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4vw;
+    flex-direction: row;
+    width: 100%;
+    height: 35vh;
+    position: absolute;
+    top: 220px;
+}
+
+.box {
+    height: 55vh;
+    width: 27%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 0;
+    border-radius: 30px;
+    gap: 20px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.name {
+    font-size: 22px;
+    color: #F1F1F1;
+    letter-spacing: 4px;
+    font-family: 'Poppins', sans-serif;
+}
+
+img {
+    width: 267px;
+    height: 267px;
+    clip-path: circle(50% at 50% 50%);
+    border: 2px solid #F1F1F1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    opacity: 0;
+    border-radius: 30px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.overlay > * {
+    transform: translateY(20px);
+    transition: transform 0.35s;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+.overlay:hover > * {
+    transform: translateY(0);
+}
+
+.overlay--blur {
+    backdrop-filter: blur(20px);
+}
+
+.fullname {
+    width: 100%;
+    height: 7vh;
+    color: #F1F1F1;
+    font-size: 1.4rem;
+    padding: 17px;
+    letter-spacing: 6px;
+    font-weight: bold;
+}
+
+.description {
+    color: #F1F1F1;
+    width: 100%;
+    height: 50vh;
+    font-size: 17px;
+    padding: 15px;
+    line-height: 21px;
+    letter-spacing: 3px;
+}
+
+.description > span {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 600;
+}
+
+.icon {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+ion-icon {
+    font-size: 30px;
+    color: #F1F1F1;
+}
+
+footer {
+    background-color: #1D2A6D;
+    padding: 10px;
+    text-align: center;
+    color: #F1F1F1;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Media Queries */
+@media (max-width: 1000px) {
+    header {
+        flex-direction: row;
+        justify-content: space-around;
+        height: 13vh;
+    }
+
+    header h1 {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 78vw;
+        height: 12vh;
+        font-size: 27px;
+        text-shadow: -2px 3px 6px rgba(255, 255, 255, 0.4);
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 20px;
+    }
+
+    h1 a {
+        margin: 0 10px;
+    }
+
+    h1:hover {
+        width: 80vw;
+        height: 12.8vh;
+        font-size: 30px;
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .big {
+        font-size: 40px;
+    }
+
+    .mainbody {
+        width: 95vw;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    img {
+        width: 350px;
+        height: 350px;
+    }
+
+    .note {
+        font-size: 50px;
+    }
+
+    .box {
+        height: 414px;
+        width: 50%;
+    }
+
+    .fullname {
+        height: 8vh;
+        font-size: 1.4rem;
+        padding: 13px;
+    }
+
+    .description {
+        height: 309px;
+    }
+
+    .heading {
+        height: 83vh;
+    }
+
+    #profile {
+        height: 100vh;
+        flex-direction: column;
+    }
+
+    section {
+        height: 140vh;
+    }
+
+    .icon {
+        height: 75px;
+    }
+
+    .name {
+        font-size: 26px;
+    }
+}
